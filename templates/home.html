@@ -31,372 +31,891 @@
 	</style>
 </head>
 
-<body>
-	<!--Main Wrapper-->
-	<div class="wrapper">
-		<!-- Header Start -->
-		<header id="header">
-			<div class="main-header">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-							<div class="logo">
-								<figure>
-									<a href="index.html" class="light-logo">
-										<img src="{% static 'logo/foodOnlineLogo.png' %}" alt="FoodBakery" height="40px">
-									</a>
-								</figure>
-							</div>
-							<div class="main-nav">
-									<nav id="site-navigation" class="main-navigation">
-										<ul>
-											<li>
-												<a href="#">Demos</a>
-												<ul>
-													<li><a href="index.html">Food Bakery</a></li>
-													<li><a href="mexican-restaurant.html">Mexican Restaurant</a></li>
-													<li><a href="foodstop.html">Food Stop</a></li>
-													<li><a href="rtl.html">Rtl Demo</a></li>
-													<li><a href="food-cout.html">Food Court</a></li>
-													<li><a href="single-restaurant.html">Single Restaurant Demo</a></li>
-												</ul>
-												<!--End Sub Menu -->
-											</li>
-											<li><a href="listings.html">Restaurants</a></li>
-											<li>
-												<a href="#">Pages</a>
-												<ul>
-													<li><a href="price-plans.html">Price Plans</a></li>
-													<li><a href="how-it-works.html">How it works</a></li>
-													<li><a href="faq.html">FAQ’s</a></li>
-													<li><a href="404.html">404</a></li>
-													<li><a href="search-result.html">Search Result</a></li>
-													<li><a href="contact-us.html">Contact</a></li>
-												</ul>
-												<!--End Sub Menu -->
-											</li>
-											<li>
-												<a href="#">Blogs</a>
-												<ul>
-													<li><a href="blog-large.html">Blog Large</a></li>
-													<li><a href="blog-medium.html">Blog Medium</a></li>
-													<li><a href="blog-masonry.html">Blog Masonry</a></li>
-													<li><a href="blog-detail.html">Blog Detail Page</a></li>
-												</ul>
-												<!--End Sub Menu -->
-											</li>
-										</ul>
-									</nav><!-- .main-navigation -->
-								</div>
-							
-							<div class="main-location">
-								<ul>
-									<li class="location-has-children choose-location">
-										<form action="#">
-											<input type="text" value="" name="location" placeholder="Enter your delivery location" autocomplete="off">
-											<span id="foodbakery_radius_location_open" class="foodbakery-radius-location"><i class="icon-target5"></i></span>
-										</form>
-										
-									</li>
-								</ul>
-								</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="login-option">
-								<a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="register-restaurant.html">
-									Register
-									Restaurant </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- Header End -->
-		<!-- Main Section Start -->
-		<div class="main-section">
-			<!-- Home Pages Elements Strat -->
-			<!-- Main Search Start -->
-			<div class="page-section nopadding cs-nomargin" style="padding-top: 200px; padding-bottom: 150px; margin-bottom: 0px; background: url(assets/extra-images/bg-image1.jpg) no-repeat center / cover;">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-							<div class="element-title">
-								<h1 style="font-size: 40px; color: #505050; text-transform: uppercase; line-height: 50px; margin-bottom: 25px; text-align:center;">
-									We are in the business of food<br>our restaurants do</h1>
-								<p style="font-size: 18px; letter-spacing: 1px; color: #505050; text-align:center;">
-									Ridiculus sociosqu
-									cursus neque cursus curae ante scelerisque vehicula.</p>
-							</div>
-						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-							<div class="main-search fancy bg-holder">
-								<form>
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
-											<div class="field-holder">
-												<input type="text" placeholder="Resturant name">
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-											<div class="field-holder">
-												<ul>
-													<li class="select-location">
-														<div class="foodbakery-locations-fields-group foodbakery-focus-out">
-															<span class="foodbakery-search-location-icon"><i class="icon-location"></i></span>
-															<span id="foodbakery_radius_location_open333" class="foodbakery-radius-location"><i class="icon-target5"></i></span>
-															<input type="text" class="location-field-text filter" placeholder="All Locations">
-														</div>
-														<div class="select-location" id="foodbakery-radius-range333" style="display: none;">
-															<div class="select-popup popup-open">
-																<a id="location_close_popup333" href="javascript:0;" class="location-close-popup">
-																	<i class="icon-times"></i></a>
-																<input type="hidden" class="foodbakery-radius" name="foodbakery_radius" value="10">
-																<p>Show with in</p>
-																<input id="ex16b333" type="text" data-value="10" value="10" style="display: none;">
-																<script>
-																	jQuery(document).ready(function () {
-																		var elem = jQuery("#ex16b333");
-																		if (elem.length != "") {
-																			elem.slider({
-																				step: 1,
-																				min: 0,
-																				max: 500,
-																				value: 10,
-																			});
-																			elem.on("slideStop", function () {
-																				var rang_slider_val = elem.val();
-																				jQuery("#ex16b333CurrentSliderValLabel").html(rang_slider_val);
-																				jQuery("#range-hidden-foodbakery-radius333").val(rang_slider_val);
-																				//foodbakery_restaurant_content("333");
-																			});
-																			elem.on("slide", function () {
-																				jQuery("#ex16b333CurrentSliderValLabel").html(elem.val());
-																			});
-																		}
+<div class="wrapper">
+    <!-- Header Start -->
+    <header id="header">
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <div class="logo">
+                            <figure>
+                                <a href="index.html" class="light-logo">
+                                    <img src="{% static 'logo/foodOnlineLogo.png' %}" alt="FoodBakery" height="40px">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="main-nav">
+                                <nav id="site-navigation" class="main-navigation">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Demos</a>
+                                            <ul>
+                                                <li><a href="index.html">Food Bakery</a></li>
+                                                <li><a href="mexican-restaurant.html">Mexican Restaurant</a></li>
+                                                <li><a href="foodstop.html">Food Stop</a></li>
+                                                <li><a href="rtl.html">Rtl Demo</a></li>
+                                                <li><a href="food-cout.html">Food Court</a></li>
+                                                <li><a href="single-restaurant.html">Single Restaurant Demo</a></li>
+                                            </ul>
+                                            <!--End Sub Menu -->
+                                        </li>
+                                        <li><a href="listings.html">Restaurants</a></li>
+                                        <li>
+                                            <a href="#">Pages</a>
+                                            <ul>
+                                                <li><a href="price-plans.html">Price Plans</a></li>
+                                                <li><a href="how-it-works.html">How it works</a></li>
+                                                <li><a href="faq.html">FAQ’s</a></li>
+                                                <li><a href="404.html">404</a></li>
+                                                <li><a href="search-result.html">Search Result</a></li>
+                                                <li><a href="contact-us.html">Contact</a></li>
+                                            </ul>
+                                            <!--End Sub Menu -->
+                                        </li>
+                                        <li>
+                                            <a href="#">Blogs</a>
+                                            <ul>
+                                                <li><a href="blog-large.html">Blog Large</a></li>
+                                                <li><a href="blog-medium.html">Blog Medium</a></li>
+                                                <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                <li><a href="blog-detail.html">Blog Detail Page</a></li>
+                                            </ul>
+                                            <!--End Sub Menu -->
+                                        </li>
+                                    </ul>
+                                </nav><!-- .main-navigation -->
+                            </div>
+                        
+                        <div class="main-location">
+                            <ul>
+                                <li class="location-has-children choose-location">
+                                    <form action="#">
+                                        <input type="text" value="" name="location" placeholder="Enter your delivery location" autocomplete="off">
+                                        <span id="foodbakery_radius_location_open" class="foodbakery-radius-location"><i class="icon-target5"></i></span>
+                                    </form>
+                                    
+                                </li>
+                            </ul>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="login-option">
+                            <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="register-restaurant.html">
+                                Register
+                                Restaurant </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Main Section Start -->
+    <div class="main-section ">
+        <div class="page-section nopadding cs-nomargin"
+            style="margin-top: 0px;padding-top: 250px;padding-bottom: 250px;margin-bottom: 0px;background: url({% static 'extra-images/home-top-1.jpg' %}) no-repeat center / cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="column-content ">
+                                    <b
+                                        style="font-size: 50px; text-transform: uppercase; line-height: 60px; text-align: center; display: block; margin-bottom: 30px; letter-spacing: 6px; color: rgb(255, 255, 255);">
+                                        ORGANIC FAST FOOD MADE<br>EASY AND HEALTHY</b>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="main-search fancy modern">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
+                                                <div class="field-holder">
+                                                    <i class="icon-search"></i>
+                                                    <input type="text" placeholder="Resturant name"
+                                                        name="search_title" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                                <div class="field-holder">
+                                                    <ul>
+                                                        <li class="select-location">
+                                                            <div
+                                                                class="foodbakery-locations-fields-group foodbakery-focus-out">
+                                                                <span id="foodbakery_radius_location_open333"
+                                                                    class="foodbakery-radius-location"><i
+                                                                        class="icon-target5"></i></span>
+                                                                <input type="text"
+                                                                    class="location-field-text filter"
+                                                                    placeholder="All Locations">
+                                                            </div>
+                                                            <div class="select-location"
+                                                                id="foodbakery-radius-range333"
+                                                                style="display: none;">
+                                                                <div class="select-popup popup-open">
+                                                                    <a id="location_close_popup333"
+                                                                        href="javascript:0;"
+                                                                        class="location-close-popup">
+                                                                        <i class="icon-times"></i></a>
+                                                                    <input type="hidden" class="foodbakery-radius"
+                                                                        name="foodbakery_radius" value="10">
+                                                                    <p>Show with in</p>
+                                                                    <input id="ex16b333" type="text" data-value="10"
+                                                                        value="10" style="display: none;">
+                                                                    <script>
+                                                                        jQuery(document).ready(function () {
+                                                                            var elem = jQuery("#ex16b333");
+                                                                            if (elem.length != "") {
+                                                                                elem.slider({
+                                                                                    step: 1,
+                                                                                    min: 0,
+                                                                                    max: 500,
+                                                                                    value: 10,
+                                                                                });
+                                                                                elem.on("slideStop", function () {
+                                                                                    var rang_slider_val = elem.val();
+                                                                                    jQuery("#ex16b333CurrentSliderValLabel").html(rang_slider_val);
+                                                                                    jQuery("#range-hidden-foodbakery-radius333").val(rang_slider_val);
+                                                                                    //foodbakery_restaurant_content("333");
+                                                                                });
+                                                                                elem.on("slide", function () {
+                                                                                    jQuery("#ex16b333CurrentSliderValLabel").html(elem.val());
+                                                                                });
+                                                                            }
 
-																		$("#foodbakery_radius_location_open333").click(function () {
-																			$("#foodbakery-radius-range333").show();
-																		});
-																		$("#location_close_popup333").click(function () {
-																			$("#foodbakery-radius-range333").hide();
-																		});
-																	});
-																</script>
-																<span>Miles: <span id="ex16b333CurrentSliderValLabel">10</span></span><br>
-																<p class="my-location">of <i class="cs-color icon-location-arrow"></i><a id="foodbakery-geo-location-all" class="cs-color foodbakery-geo-location313324" href="javascript:void(0)">My location</a></p>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-											<div class="field-holder">
-												<input type="submit" value="Search">
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<!-- Main Search End -->
-			
-			<!-- Top Restarurants Section Start -->
-			<div class="page-section nopadding cs-nomargin" style="margin-top: 0px;padding-top: 60px;padding-bottom: 0px;margin-bottom: 0px;background: #ffffff;">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="element-title align-left">
-								<h2>Top Restaurants</h2>
-								<p>Explore restaurants, bars, and cafés by locality</p>
-							</div>
-						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="company-logo">
-								<ul>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="{% static 'extra-images/listing-logo18.png' %}" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-02.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-04.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-06.jpg" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/xlisting-logo03.png.pagespeed.ic_.aT-o9LinEJ.png" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/listing-logo09.png" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/listing-logo18.png" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-									<li class="has-border">
-										<figure>
-											<a href="#"><img src="assets/extra-images/fb-restaurant-09.png" class="attachment-full size-full wp-post-image" alt=""></a>
-										</figure>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Top Restarurants Section End -->
-			<!-- Choose From Most Popular Listin Start -->
-			<div class="page-section nopadding cs-nomargin" style="margin-top: 0px;padding-top: 60px;padding-bottom: 50px;margin-bottom: 0px;background: #ffffff;">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="element-title align-center">
-								<h2>Choose From Most Popular Restaurants</h2>
-								<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-							</div>
-						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="listing fancy">
-								<ul class="row">
-									<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-										<div class="list-post featured">
-											<div class="img-holder">
-												<figure><a href="#"><img src="assets/extra-images/listing-logo18.png" class="img-thumb wp-post-image" alt=""></a></figure>
-												<span class="restaurant-status close">
-													<em class="bookmarkRibbon"></em>Close
-												</span>
-											</div>
-											<div class="text-holder">
-												<div class="list-rating">
-													<div class="rating-star">
-														<span class="rating-box" style="width: 100%;"></span>
-													</div>
-													<span class="reviews">(1)</span>
-												</div>
-												<div class="post-title">
-													<h5>
-														<a href="listing-detail.html">Restaurant Demo</a>
-														<span class="sponsored text-color">Sponsored</span>
-													</h5>
-												</div>
-												<address> <span>Type of food : </span> Apple Juice</address>
-											</div>
-											
-										</div>
-									</li>
-									
-									
-									
-									
-									<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-										<div class="list-post featured">
-											<div class="img-holder">
-												<figure><a href="#"><img src="assets/extra-images/listing-logo09.png" class="img-thumb wp-post-image" alt=""></a></figure>
-												<span class="restaurant-status open">
-													<em class="bookmarkRibbon"></em>open
-												</span>
-											</div>
-											<div class="text-holder">
-												<div class="list-rating">
-													<div class="rating-star">
-														<span class="rating-box" style="width: 100%;"></span>
-													</div>
-													<span class="reviews">(1)</span>
-												</div>
-												<div class="post-title">
-													<h5>
-														<a href="listing-detail.html">Classic Restaurant</a>
-														<span class="sponsored text-color">Sponsored</span>
-													</h5>
-												</div>
-												<address> <span>Type of food : </span> Chicken Roast, Chines
-													Soup, Cold
-													Coffee, Cold Drink, Hot Dogs</address>
-											</div>
-											
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Choose From Most Popular Listing End -->
+                                                                            $("#foodbakery_radius_location_open333").click(function () {
+                                                                                $("#foodbakery-radius-range333").show();
+                                                                            });
+                                                                            $("#location_close_popup333").click(function () {
+                                                                                $("#foodbakery-radius-range333").hide();
+                                                                            });
+                                                                        });
+                                                                    </script>
+                                                                    <span>Miles: <span
+                                                                            id="ex16b333CurrentSliderValLabel">10</span></span><br>
+                                                                    <p class="my-location">of <i
+                                                                            class="cs-color icon-location-arrow"></i><a
+                                                                            id="foodbakery-geo-location-all"
+                                                                            class="cs-color foodbakery-geo-location313324"
+                                                                            href="javascript:void(0)">My
+                                                                            location</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                <div class="field-holder">
+                                                    <input class="bgcolor" type="submit" value="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
 
-			<!-- Home Pages Elements End  -->
-		</div>
-		<!-- Main Section End -->
-		<!-- Footer Start -->
-		<footer id="footer" class="footer-style-2">
-			<div class="footer-widget">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="widget widget-newsletter">
-								<div class="widget-title">
-									<h5>Subscribe to our Newsletter</h5>
-								</div>
-								<div class="fieldset">
-									<form action="#">
-										<div class="field-holder">
-											<label>
-												<i class=" icon-envelope3"></i>
-												<input type="text" class="field-input" placeholder=" Enter Your Email Address...">
-											</label>
-										</div>
-										<div class="field-holder btn-holder">
-											<input class="subscribe-btn bgcolor" type="submit" value="Sign Up">
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="copyright-sec">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="copyright-inner">
-								<div class="copy-right">
-									<p>© 2025 FoodOnline. All Rights Reserved. Developed By <a href="#">FoodOnline</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> <!-- /.cs-copyright -->
-		</footer>
-		<!-- Footer End -->
-	</div>
-	
-	<!-- Modal Popup End -->
-	<script src="{% static 'js/scripts.js' %}"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Top Restarurants Section Start -->
+        <div class="page-section nopadding cs-nomargin"
+            style="margin-top: 0px;padding-top: 60px;padding-bottom: 0px;margin-bottom: 0px;background: #ffffff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="element-title align-left">
+                            <h2>Top Restaurants</h2>
+                            <p>Explore restaurants, bars, and cafés by locality</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="company-logo">
+                            <ul>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/listing-logo18.png"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/fb-restaurant-02.jpg"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/fb-restaurant-04.jpg"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/fb-restaurant-06.jpg"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img
+                                                src="assets/extra-images/xlisting-logo03.png.pagespeed.ic_.aT-o9LinEJ.png"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/listing-logo09.png"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/listing-logo18.png"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                                <li class="has-border">
+                                    <figure>
+                                        <a href="#"><img src="assets/extra-images/fb-restaurant-09.png"
+                                                class="attachment-full size-full wp-post-image" alt=""></a>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Restarurants Section End -->
+
+        <div class="page-section nopadding cs-nomargin"
+            style="margin-top: 0px;padding-top: 45px;padding-bottom: 60px;margin-bottom: 0px;background: #ffffff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="cs-section-title" style="text-align:center!important;">
+                            <h2>Choose from Most Popular</h2>
+                            <span style="color:#aaaaaa;">Explore restaurants, bars, and cafés by locality</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="listing grid-listing three-cols">
+                                <div class="col-md-4 col-xs-6 grid-listing-col ">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"><img src="assets/extra-images/cover-photo20-359x212.jpg"
+                                                    alt=""> </a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <span class="label bgcolor time-label"
+                                                            style="display: none;"></span>
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i> </a>
+                                                    </div>
+                                                    <div class="list-rating">
+                                                        <div class="rating-star">
+                                                            <span class="rating-box" style="width: 100%;"></span>
+                                                        </div>
+                                                        <span class="reviews">(1)</span>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Nature Healthy Food</a></h4>
+                                            <p>Apple Juice, Beef Roast, Cheese Burger</p>
+                                            <div class="min-order">Min Order <span class="price">£15.00</span></div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/listing-logo03.png"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Bristol, Bristol</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-6 grid-listing-col ">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"><img src="assets/extra-images/cover-photo19-359x212.jpg"
+                                                    alt=""></a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <span class="label bgcolor time-label distance-1705"
+                                                            style="display: none;"></span>
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Menu &amp; Drinks</a></h4>
+                                            <p>Chicken Roast, Chines Soup, Cold Coffee</p>
+                                            <div class="min-order">
+                                                Min Order <span class="price">£10.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/listing-logo09.png"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Norfolk, Acle</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-6 grid-listing-col">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"> <img src="assets/extra-images/cover-photo18-359x212.jpg"
+                                                    alt=""></a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <span class="label bgcolor time-label"
+                                                            style="display: none;"></span>
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Chefs</a></h4>
+                                            <p>Egg Fry, Noodles, Pastry</p>
+                                            <div class="min-order">
+                                                Min Order <span class="price">£10.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/listing-logo12.png"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Cheshire, Chester</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-6 grid-listing-col featured">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"><img src="assets/extra-images/cover-photo17-359x212.jpg"
+                                                    alt=""></a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Menu’s</a></h4>
+                                            <p>Fish Fry, Fresh Juice, Stakes</p>
+                                            <div class="min-order">
+                                                Min Order <span class="price">£15.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/listing-logo15.png"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Cumbria, Aspatria</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-6 grid-listing-col ">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"><img src="assets/extra-images/cover-photo16-359x212.jpg"
+                                                    alt=""></a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <span class="label bgcolor time-label distance-1566"
+                                                            style="display: none;"></span>
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Food N&amp;H</a></h4>
+                                            <p>Beef Roast, Cheese Burger, Doughnut</p>
+                                            <div class="min-order">
+                                                Min Order <span class="price">£20.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/2.png" alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Dorset, Bridport</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xs-6 grid-listing-col featured">
+                                    <div class="img-holder">
+                                        <figure>
+                                            <a href="#"><img src="assets/extra-images/cover-photo15-359x212.jpg"
+                                                    alt=""></a>
+                                            <figcaption class="listing-meta">
+                                                <div class="listing-inner clearfix">
+                                                    <div class="list-option">
+                                                        <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                            data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                                    </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <div class="listing-inner">
+                                            <h4><a href="#">Restaurant</a></h4>
+                                            <p>Apple Juice, BB.Q</p>
+                                            <div class="min-order">
+                                                Min Order <span class="price">£25.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="listing-footer">
+                                            <div class="listing-inner clearfix">
+                                                <div class="img-holder">
+                                                    <a href="#"><img src="assets/extra-images/listing-logo13.png"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <p>Bedfordshire, Bedford</p>
+                                                    <p class="deliver-time"><span class="icon-motorcycle2"></span>10
+                                                        min</p>
+                                                    <p class="pickup-time"><span class="icon-clock4"></span>15 min
+                                                    </p>
+                                                    <a href="#" class="ordernow-btn bgcolor">Order Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section nopadding cs-nomargin"
+            style="margin-top: 0px;padding-top: 20px;padding-bottom: 10px;margin-bottom: 0px; background: #ffffff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="cs-section-title" style="text-align:center!important;">
+                            <h2>Featured restaurants</h2>
+                            <span style="color:#aaaaaa;">Cum doctus civibus efficiantur in imperdiet
+                                deterruisset.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="listing fancy fancy-simple">
+                            <ul class="row">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post ">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"><img src="assets/extra-images/listing-logo03.png"
+                                                        alt=""></a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="#">Nature Healthy Food</a></h5>
+                                            </div>
+                                            <address>Apple Juice, Beef Roast, Cheese Burger</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £15.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min</div>
+                                                <div class="list-rating">
+                                                    <div class="rating-star">
+                                                        <span class="rating-box" style="width: 100%;"></span>
+                                                    </div>
+                                                    <span class="reviews">(1)</span>
+                                                </div>
+                                                <span>Bristol</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option">
+                                            <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post ">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"><img src="assets/extra-images/listing-logo09.png"
+                                                        alt=""> </a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="#">Menu &amp; Drinks</a></h5>
+                                            </div>
+                                            <address>Chicken Roast, Chines Soup, Cold Coffee</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £10.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min</div>
+                                                <span>Acle</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option">
+                                            <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post featured">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"><img src="assets/extra-images/listing-logo12.png"
+                                                        alt=""></a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="@">Chefs</a> <span
+                                                        class="sponsored text-color">Sponsored</span></h5>
+                                            </div>
+                                            <address>Egg Fry, Noodles, Pastry</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £10.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min </div>
+                                                <span>Chester</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option">
+                                            <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post featured">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"> <img src="assets/extra-images/listing-logo15.png"
+                                                        alt=""></a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="#">Menu’s</a><span
+                                                        class="sponsored text-color">Sponsored</span></h5>
+                                            </div>
+                                            <address>Fish Fry, Fresh Juice, Stakes</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £15.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min </div>
+                                                <span>Aspatria</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option">
+                                            <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post ">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"><img src="assets/extra-images/2.png" alt=""> </a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status close"><em
+                                                class="bookmarkRibbon"></em>Close</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="#">Food N&amp;H</a></h5>
+                                            </div>
+                                            <address>Beef Roast, Cheese Burger, Doughnut</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £20.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min</div>
+                                                <span>Bridport</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option"><a href="#" class="shortlist-btn"
+                                                data-toggle="modal" data-target="#sign-in"><i
+                                                    class="icon-heart-o"></i> </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="list-post featured">
+                                        <div class="img-holder">
+                                            <figure>
+                                                <a href="#"><img src="assets/extra-images/listing-logo13.png"
+                                                        alt=""></a>
+                                            </figure>
+                                        </div>
+                                        <span class="restaurant-status open"><em
+                                                class="bookmarkRibbon"></em>Open</span>
+                                        <div class="text-holder">
+                                            <div class="post-title">
+                                                <h5><a href="#">Restaurant</a>
+                                                    <span class="sponsored text-color">Sponsored</span>
+                                                </h5>
+                                            </div>
+                                            <address>Apple Juice, BB.Q</address>
+                                            <div class="delivery-potions">
+                                                <div class="post-time"><i class="icon-check_circle"></i>Min £25.00
+                                                </div>
+                                                <div class="post-time"><i class="icon-motorcycle"></i>10 min</div>
+                                                <div class="post-time"><i class="icon-clock4"></i>15 min</div>
+                                                <span>Bedford</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-option">
+                                            <a href="#" class="shortlist-btn" data-toggle="modal"
+                                                data-target="#sign-in"><i class="icon-heart-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Main Section End -->
+
+    <!-- Footer Start -->
+    <footer id="footer" class="footer-style-1">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="widget widget-top-cities">
+                                    <div class="widget-title">
+                                        <h5>Popular Cities</h5>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">Aberaeron</a></li>
+                                        <li><a href="#">Aberdeen</a></li>
+                                        <li><a href="#">Aberfeldy</a></li>
+                                        <li><a href="#">Abergavenny</a></li>
+                                        <li><a href="#">Aldershot</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="widget widget-top-cities">
+                                    <div class="widget-title">
+                                        <h5>Popular Cuisnies</h5>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">Apple Juice</a></li>
+                                        <li><a href="#">BB.Q</a></li>
+                                        <li><a href="#">Chicken Roast</a></li>
+                                        <li><a href="#">Hot Dogs</a></li>
+                                        <li><a href="#">Prawns</a></li>
+                                        <li><a href="#">Steam Roast</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="widget widget-categories">
+                                    <div class="widget-title">
+                                        <h5>Menu</h5>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#"> Home</a></li>
+                                        <li><a href="#"> Blog Large</a></li>
+                                        <li><a href="#"> Contact</a></li>
+                                        <li><a href="#"> FAQ’s</a></li>
+                                        <li><a href="#"> How it works</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="widget widget-connect">
+                                    <div class="widget-title">
+                                        <h5> Connect</h5>
+                                    </div>
+                                    <ul class="social-media">
+                                        <li><a href="#" data-original-title="twitter"><i
+                                                    class=" icon-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" data-original-title="linkedin"><i
+                                                    class="icon-linkedin"></i></a>
+                                        </li>
+                                        <li><a href="#" data-original-title="pinterest"><i
+                                                    class="icon-pinterest"></i></a>
+                                        </li>
+                                        <li><a href="#" data-original-title="google"><i class="icon-google"></i></a>
+                                        </li>
+                                        <li><a href="#" data-original-title="instagram"><i
+                                                    class="icon-instagram"></i></a>
+                                        </li>
+                                        <li><a href="#" data-original-title="youtube"><i
+                                                    class="icon-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><span class="bgcolor"><i class="icon-ring_volume"></i></span>
+                                            <p>+1 321 828 6662</p>
+                                        </li>
+                                        <li><span class="bgcolor"><i class="icon-envelope-o"></i></span>
+                                            <p><a href="#">support@chimpstudio.com</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="copyright-inner">
+                            <div class="copy-right">
+                                <p>© 2020 Foodbakery. All Rights Reserved. Powered By <a href="#">ChimpGroup</a>.
+                                </p>
+                            </div>
+                            <div class="right-logos">
+                                <p>
+                                    <img src="assets/extra-images/footer-logo1.png" alt="">
+                                    <img src="assets/extra-images/footer-logo2.png" alt="">
+                                    <img src="assets/extra-images/footer-logo3.png" alt="">
+                                    <img src="assets/extra-images/footer-logo4.png" alt="">
+                                    <img src="assets/extra-images/footer-logo5.png" alt="">
+                                    <img src="assets/extra-images/footer-logo6.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="{% static 'js/scripts.js' %}"></script>
 	<script src="{% static 'js/functions.js' %}"></script>
-</body>
+{% comment %} 
+    <script src="{% static 'js/responsive.menu.js' %}"></script>
+	<script src="{% static 'js/swiper.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fitvids.js' %}"></script>
+	<script src="{% static 'js/bootstrap-slider.js' %}"></script> {% endcomment %}
+	
+</div>
 
 </html>
