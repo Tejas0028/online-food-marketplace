@@ -1,0 +1,16 @@
+@keyframes show-toast {
+    0% { bottom: -100px; opacity: 0; }
+    20% { bottom: 180px; opacity: 1; }
+    80% { bottom: 180px; opacity: 1; }
+    100% { bottom: -100px; opacity: 0; }
+}
+
+.show-notification {
+    position: fixed;
+    bottom: -100px;  /* Start hidden */
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: show-toast 8s ease-in-out;
+}
