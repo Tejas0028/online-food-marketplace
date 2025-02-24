@@ -1,4 +1,4 @@
-@keyframes show-toast {
+ @keyframes show-toast {
     0% { bottom: -100px; opacity: 0; }
     20% { bottom: 180px; opacity: 1; }
     80% { bottom: 180px; opacity: 1; }
@@ -7,7 +7,7 @@
 
 .show-notification {
     position: fixed;
-    bottom: -100px;  /* Start hidden */
+    bottom: -100px; 
     right: 20px;
     padding: 15px 20px;
     border-radius: 8px;
